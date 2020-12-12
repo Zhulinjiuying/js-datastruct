@@ -5,7 +5,6 @@ class Queue {
     this._queue = {};
     this._length = 0;
     this._headIndex = 0;
-    this._endIndex = 0;
   }
 
   get length() {
@@ -26,14 +25,7 @@ class Queue {
 
   set headIndex(value) {}
 
-  get endIndex() {
-    return this._endIndex;
-  }
-
-  set endIndex(value) {}
-
   enQueue(item) {
-    this._endIndex = this._length;
     this._queue[this._length++] = item;
   }
 
